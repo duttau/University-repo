@@ -26,7 +26,7 @@ public class DepartmentController {
         return ResponseEntity.ok(service.getAllDepartments());
     }
 
-    @GetMapping("deptName")
+    @GetMapping("/deptName")
     public ResponseEntity<DepartmentDTO> getByName(@RequestParam String deptName) {
         return ResponseEntity.ok(service.getByName(deptName));
     }

@@ -6,17 +6,25 @@ public class DepartmentDTO {
     private Long id;
     private String name;
     private List<CourseDTO> courses;
+    private List<StudentDTO> students;
 
 
-    private List<Object> students;
-
-    public List<Object> getStudents() {
+    public List<StudentDTO> getStudents() {
         return students;
     }
 
-    public void setStudents(List<Object> students) {
+
+    public void setStudents(List<StudentDTO> students) {
         this.students = students;
     }
+
+//    public List<Object> getStudents() {
+//        return students;
+//    }
+
+//    public void setStudents(List<Object> students) {
+//        this.students = students;
+//    }
 
     public Long getId() {
         return id;
