@@ -30,8 +30,5 @@ public class DepartmentController {
     public ResponseEntity<DepartmentDTO> getByName(@RequestParam String deptName) {
         return ResponseEntity.ok(service.getByName(deptName));
     }
-    @GetMapping("/{id}")
-    public ResponseEntity<DepartmentDTO> getById(@PathVariable Long id) {
-        return ResponseEntity.ok(service.getById(id));
-    }
+   
 }
