@@ -39,13 +39,7 @@ public class DepartmentService {
         return result;
     }
 
-    public DepartmentDTO getById(Long id) {
-        Optional<Department> optional = repository.findById(id);
-        if (!optional.isPresent()) throw new RuntimeException("Department not found");
-        return getDepartmentWithCoursesAndStudents(optional.get());
-    }
-
-    public DepartmentDTO getByName(String deptName) {
+        public DepartmentDTO getByName(String deptName) {
         Optional<Department> optional = repository.findByName(deptName);
         if (!optional.isPresent()) throw new RuntimeException("Department not found");
         return getDepartmentWithCoursesAndStudents(optional.get());
