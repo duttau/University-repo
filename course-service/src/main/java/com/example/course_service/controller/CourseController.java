@@ -31,15 +31,7 @@ public class CourseController {
     public ResponseEntity<CourseDTO> getByName(@PathVariable String name) {
         return ResponseEntity.ok(service.getByName(name));
     }
-//    @GetMapping("/name/{name}")
-//    public ResponseEntity<?> getByCourseName(@PathVariable String name) {
-//        CourseDTO dto = service.getCourseWithDetailsByName(name);
-//        return ResponseEntity.ok(dto);
-//    }
 
-    @GetMapping("/department/{deptId}")
-    public ResponseEntity<List<CourseDTO>> getByDept(@PathVariable Long deptId) {
-        return ResponseEntity.ok(service.getCoursesWithStudentsByDept(deptId));
-    }
+   
 }
 
